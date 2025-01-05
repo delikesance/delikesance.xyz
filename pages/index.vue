@@ -18,13 +18,15 @@ import VisitCounter from './components/VisitCounter.vue'
 import CopyNotification from './components/CopyNotification.vue'
 
 const showNotification = ref(false)
-const visitCount = ref(0)
+const visitCount = ref({
+  totalVisits: 0, uniqueVisits: 0
+})
 
 onMounted(async () => {
   try {
     const response = await fetch('/api/visits')
     const data = await response.json()
-    visitCount.value = data.visits
+    visitCount.value = data
   } catch (error) {
     console.error('Error fetching visit count:', error)
   }
