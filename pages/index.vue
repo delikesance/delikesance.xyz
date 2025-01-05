@@ -9,7 +9,7 @@
             momo</a>
           <h1 class="md:text-7xl text-5xl font-black text-white drop-shadow-lg">Delikesance</h1>
           <h2
-            class="text-2xl text-purple-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-3 md:translate-y-4 text-outline">
+            class="text-2xl text-purple-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-2 md:translate-y-4 text-outline">
             潮解</h2>
         </div>
 
