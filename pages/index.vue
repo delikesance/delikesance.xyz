@@ -5,7 +5,7 @@
       <div class="flex flex-col gap-5">
         <div class="flex flex-col items-center relative">
           <a href="https://tracker.gg/valorant/profile/riot/Moiragh%23EUWD/overview"
-            class="absolute text-purple-600 z-30 text-outline right-10 -top-1 font-bold uppercase text-sm">approved by
+            class="absolute text-purple-600 z-30 text-outline right-0 md:right-0 md:top-0 -top-1 font-bold uppercase text-sm">approved by
             momo</a>
           <h1 class="md:text-7xl text-5xl font-black text-white drop-shadow-lg">Delikesance</h1>
           <h2
