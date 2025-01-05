@@ -1,6 +1,13 @@
 <template>
   <div class="video-container">
-    <video class="absolute inset-0 w-full h-full object-cover opacity-40" autoplay loop muted playsinline>
+    <video 
+      ref="videoPlayer"
+      class="absolute inset-0 w-full h-full object-cover opacity-30" 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+    >
       <source src="/erased-amv.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -26,8 +33,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(128, 0, 128, 0.3);
+  background-color: #7F00FF;
   mix-blend-mode: multiply;
   z-index: 5;
 }
 </style>
+
