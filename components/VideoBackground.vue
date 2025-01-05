@@ -2,7 +2,7 @@
   <div class="video-container">
     <video 
       ref="videoPlayer"
-      class="absolute inset-0 w-full h-full object-cover opacity-30" 
+      class="absolute inset-0 w-full h-full object-cover opacity-20" 
       autoplay 
       loop 
       muted 
