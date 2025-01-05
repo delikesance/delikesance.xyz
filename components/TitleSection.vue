@@ -14,9 +14,5 @@
 h1 {
   color: #efe3fa;
 }
-
-.glow-icon {
-  filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.5));
-}
 </style>
 
