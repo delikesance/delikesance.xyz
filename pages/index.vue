@@ -1,11 +1,11 @@
-
 <template>
   <header class="relative h-screen overflow-hidden">
     <section class="absolute inset-0 flex items-center justify-center z-20">
       <div class="flex flex-col gap-5">
         <div class="flex flex-col items-center relative">
           <a href="https://tracker.gg/valorant/profile/riot/Moiragh%23EUWD/overview"
-            class="absolute text-purple-600 z-30 text-outline right-0 md:right-0 md:top-0 -top-1 font-bold uppercase text-sm">approved by
+            class="absolute text-purple-600 z-30 text-outline right-0 md:right-0 md:top-0 -top-1 font-bold uppercase text-sm">approved
+            by
             momo</a>
           <h1 class="md:text-7xl text-5xl font-black text-white drop-shadow-lg">Delikesance</h1>
           <h2
@@ -52,8 +52,8 @@
     </div>
   </header>
 
-  <section class="px-10">
-    <!-- Content for this section -->
+  <section class="absolute top-0 p-5">
+    <p class="bg-purple-700 px-5 py-2 rounded">{{ visitCount }} views</p>
   </section>
 
   <div v-if="showNotification"
@@ -62,23 +62,29 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      showNotification: false
-    }
-  },
-  methods: {
-    copyToClipboard() {
-      navigator.clipboard.writeText('delikesance').then(() => {
-        this.showNotification = true;
-        setTimeout(() => {
-          this.showNotification = false;
-        }, 3000);
-      });
-    }
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const showNotification = ref(false)
+const visitCount = ref(0)
+
+onMounted(async () => {
+  try {
+    const response = await fetch('/api/visits')
+    const data = await response.json()
+    visitCount.value = data.visits
+  } catch (error) {
+    console.error('Error fetching visit count:', error)
   }
+})
+
+const copyToClipboard = () => {
+  navigator.clipboard.writeText('delikesance').then(() => {
+    showNotification.value = true
+    setTimeout(() => {
+      showNotification.value = false
+    }, 3000)
+  })
 }
 </script>
 
@@ -113,4 +119,3 @@ export default {
   z-index: 5;
 }
 </style>
-
