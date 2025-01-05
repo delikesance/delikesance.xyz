@@ -33,7 +33,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #7F00FF;
+  background-color: #7F00FF90;
   mix-blend-mode: multiply;
   z-index: 5;
 }
