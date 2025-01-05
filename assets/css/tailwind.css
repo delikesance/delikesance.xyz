@@ -5,3 +5,7 @@
 body, html {
   @apply bg-black text-white
 }
+
+.purple {
+  color: #7F00FF;
+}
